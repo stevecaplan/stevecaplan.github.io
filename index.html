@@ -2,26 +2,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Steve Caplan</title>
 
 <style>
-
 body {
   font-family: Georgia, serif;
-  max-width: 850px;
-  margin: 60px auto;
+  max-width: 1000px;
+  margin: 50px auto;
   padding: 20px;
   line-height: 1.7;
   color: #222;
+  background-color: #fff;
 }
 
 h1 {
   font-size: 42px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 h2 {
-  margin-top: 40px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 28px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+p {
+  margin-top: 0;
 }
 
 a {
@@ -33,31 +42,57 @@ a:hover {
   text-decoration: underline;
 }
 
-.books {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
+.author-photo {
+  width: 200px;
+  margin: 10px 0 20px 0;
+  border-radius: 8px;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 36px 30px;
   margin-top: 20px;
 }
 
-.book {
+.book-card {
   text-align: center;
-  width: 200px;
 }
 
-.book img {
-  width: 160px;
+.book-card img {
+  width: 170px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  transition: transform 0.15s ease;
 }
 
+.book-card img:hover {
+  transform: translateY(-3px);
+}
+
+.book-title {
+  margin-top: 14px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.links-list li {
+  margin-bottom: 8px;
+}
+
+.contact {
+  margin-top: 12px;
+}
 </style>
-
 </head>
 
 <body>
 
 <h1>Steve Caplan</h1>
 
-<img src="Steve%20Caplan.jpg" alt="Steve Caplan" width="200">
+<img src="Steve%20Caplan.jpg" alt="Steve Caplan" class="author-photo">
 
 <p>
 Scientist, author, and professor of biochemistry and molecular biology.
@@ -71,66 +106,105 @@ I study membrane trafficking and also write fiction and essays.
 
 <h2>Links</h2>
 
-<ul>
-<li>
-<a href="https://www.amazon.com/stores/author/B006CSULBW/allbooks?ingress=0&visitId=8d138815-7225-4896-8284-336813f00236&ref_=aufs_ap_ahdr_dsk_aa&ccs_id=1d87220e-9753-472a-9466-e2cbeb44e180">
-Amazon Author Page
-</a>
-</li>
-
-<li>
-<a href="https://www.theguardian.com/profile/steve-caplan">
-Articles in The Guardian
-</a>
-</li>
-
-<li>
-<a href="https://scholar.google.com/citations?user=w1kiBDkAAAAJ&hl=en">
-Google Scholar Profile
-</a>
-</li>
-
-<li>
-<a href="https://lablit.com/author/143">
-LabLit Essays and Fiction
-</a>
-</li>
+<ul class="links-list">
+  <li>
+    <a href="https://www.amazon.com/stores/author/B006CSULBW/allbooks?ingress=0&visitId=8d138815-7225-4896-8284-336813f00236&ref_=aufs_ap_ahdr_dsk_aa&ccs_id=1d87220e-9753-472a-9466-e2cbeb44e180">
+      Amazon Author Page
+    </a>
+  </li>
+  <li>
+    <a href="https://www.theguardian.com/profile/steve-caplan">
+      Articles in The Guardian
+    </a>
+  </li>
+  <li>
+    <a href="https://scholar.google.com/citations?user=w1kiBDkAAAAJ&hl=en">
+      Google Scholar Profile
+    </a>
+  </li>
+  <li>
+    <a href="https://lablit.com/author/143">
+      LabLit Essays and Fiction
+    </a>
+  </li>
 </ul>
 
 <h2>Books</h2>
 
-<div class="books">
+<div class="books-grid">
 
-<div class="book">
-<a href="https://www.amazon.com/Todays-Curiosity-Tomorrows-Steve-Caplan/dp/1032065087">
-<img src="https://stevecaplan.github.io/Todays.jpg" alt="Today's Curiosity is Tomorrow's Cure">
-</a>
+  <div class="book-card">
+    <a href="https://www.amazon.com/Welcome-Home-Sir-Steve-Caplan/dp/1937536092">
+      <img src="https://stevecaplan.github.io/Welcome.jpg" alt="Welcome Home, Sir cover">
+    </a>
+    <div class="book-title">
+      <a href="https://www.amazon.com/Welcome-Home-Sir-Steve-Caplan/dp/1937536092">
+        Welcome Home, Sir
+      </a>
+    </div>
+  </div>
 
-<p>
-<a href="https://www.amazon.com/Todays-Curiosity-Tomorrows-Steve-Caplan/dp/1032065087">
-Today's Curiosity is Tomorrow's Cure
-</a>
-</p>
-</div>
+  <div class="book-card">
+    <a href="https://www.amazon.com/Degree-Betrayal-Caplan-16-Nov-2013-Paperback/dp/B013J9M09C">
+      <img src="https://stevecaplan.github.io/Degree.jpg" alt="A Degree of Betrayal cover">
+    </a>
+    <div class="book-title">
+      <a href="https://www.amazon.com/Degree-Betrayal-Caplan-16-Nov-2013-Paperback/dp/B013J9M09C">
+        A Degree of Betrayal
+      </a>
+    </div>
+  </div>
 
-<div class="book">
-<a href="https://www.amazon.com/Matter-Over-Mind-Steve-Caplan-ebook/dp/B0047GMEY8">
-<img src="https://stevecaplan.github.io/Matter.jpg" alt="Matter Over Mind">
-</a>
+  <div class="book-card">
+    <a href="https://www.amazon.com/Saving-One-Steve-Caplan/dp/1945917121">
+      <img src="https://stevecaplan.github.io/Saving.jpg" alt="Saving One cover">
+    </a>
+    <div class="book-title">
+      <a href="https://www.amazon.com/Saving-One-Steve-Caplan/dp/1945917121">
+        Saving One
+      </a>
+    </div>
+  </div>
 
-<p>
-<a href="https://www.amazon.com/Matter-Over-Mind-Steve-Caplan-ebook/dp/B0047GMEY8">
-Matter Over Mind
-</a>
-</p>
-</div>
+  <div class="book-card">
+    <a href="https://www.amazon.com/UGG-Undergraduate-Graduate-Everything-biomedical/dp/1798476509">
+      <img src="https://stevecaplan.github.io/UGG.jpg" alt="The Undergraduate Guide for Graduate School cover">
+    </a>
+    <div class="book-title">
+      <a href="https://www.amazon.com/UGG-Undergraduate-Graduate-Everything-biomedical/dp/1798476509">
+        The Undergraduate Guide for Graduate School
+      </a>
+    </div>
+  </div>
+
+  <div class="book-card">
+    <a href="https://www.amazon.com/Todays-Curiosity-Tomorrows-Steve-Caplan/dp/1032065087">
+      <img src="https://stevecaplan.github.io/Todays.jpg" alt="Today's Curiosity is Tomorrow's Cure cover">
+    </a>
+    <div class="book-title">
+      <a href="https://www.amazon.com/Todays-Curiosity-Tomorrows-Steve-Caplan/dp/1032065087">
+        Today's Curiosity is Tomorrow's Cure
+      </a>
+    </div>
+  </div>
+
+  <div class="book-card">
+    <a href="https://www.amazon.com/Matter-Over-Mind-Steve-Caplan-ebook/dp/B0047GMEY8">
+      <img src="https://stevecaplan.github.io/Matter.jpg" alt="Matter Over Mind cover">
+    </a>
+    <div class="book-title">
+      <a href="https://www.amazon.com/Matter-Over-Mind-Steve-Caplan-ebook/dp/B0047GMEY8">
+        Matter Over Mind
+      </a>
+    </div>
+  </div>
 
 </div>
 
 <h2>Contact</h2>
 
-<p>
-Email: scaplan@unmc.edu
+<p class="contact">
+Email: <a href="mailto:scaplan@unmc.edu">scaplan@unmc.edu</a>
 </p>
 
 </body>
