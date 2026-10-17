@@ -134,7 +134,34 @@ a:hover {
   font-size: 16px;
   margin-top: 2px;
 }
+.featured-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 25px 0;
+}
 
+.soncata-feature {
+  flex: 1;
+  max-width: 550px;
+}
+
+.soncata-feature img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.soncata-feature a {
+  color: #0066cc;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .featured-section {
+    flex-direction: column;
+  }
+}
 </style>
 </head>
 
@@ -148,8 +175,22 @@ a:hover {
   <div class="publisher">Soncata Press</div>
 </div>
 
-<img src="Caplan-cropped.jpg" alt="Steve Caplan" class="author-photo">
+<div class="featured-section">
 
+  <img src="Caplan-cropped.jpg" alt="Steve Caplan" class="author-photo">
+
+  <div class="soncata-feature">
+    <img src="Coming soon"
+         alt="Soncata Press announcement for October's Ashes">
+
+    <p>
+      <a href="https://soncatapress.com/forthcoming-titles/" target="_blank">
+        View October's Ashes at Soncata Press
+      </a>
+    </p>
+  </div>
+
+</div>
 <p>
 Scientist, author, and professor of biochemistry and molecular biology.
 </p>
